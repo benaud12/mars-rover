@@ -1,0 +1,21 @@
+{
+  "name": "mars-rover",
+  "version": "1.0.0",
+  "description": "Takes in commands and moves one or more robots around Mars.",
+  "main": "index.ts",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.5.3"
+  }
+}
