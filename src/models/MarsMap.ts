@@ -5,7 +5,7 @@ interface MarsMapConfig {
   maxY: number;
 }
 
-interface Coordinate {
+export interface Coordinate {
   x: number;
   y: number;
 }
