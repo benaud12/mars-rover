@@ -1,4 +1,4 @@
-interface MarsMapConfig {
+export interface MarsMapConfig {
   minX: number;
   maxX: number;
   minY: number;

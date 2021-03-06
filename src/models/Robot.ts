@@ -1,6 +1,6 @@
 import { Coordinate, MarsMap } from "./MarsMap";
 
-type Orientation = "N" | "E" | "S" | "W";
+export type Orientation = "N" | "E" | "S" | "W";
 type RotateDirection = "L" | "R";
 export type MoveCommand = "F" | RotateDirection;
 
