@@ -1,17 +1,8 @@
+import { RunConfig, RobotConfig } from "../app";
 import { MarsMapConfig } from "../models/MarsMap";
-import { Position, Orientation } from "../models/Robot";
+import { Orientation, MoveCommand } from "../models/Robot";
 
-interface RobotConfig {
-  position: Position;
-  commands: string;
-}
-
-export function parseInputData(
-  data: string
-): {
-  mapConfig: MarsMapConfig;
-  robotConfigs: RobotConfig[];
-} {
+export function parseInputData(data: string): RunConfig {
   const [mapData, ...robotConfigsData] = data
     .split(/\n/)
     .filter((line) => line.length > 0);
@@ -44,6 +35,6 @@ function parseRobotConfigData(robotConfigData: string): RobotConfig {
       y: parseInt(robotMatch?.groups?.robotY || "0", 10),
       orientation: (robotMatch?.groups?.orientation || "N") as Orientation,
     },
-    commands: robotMatch?.groups?.commands || "",
+    commands: (robotMatch?.groups?.commands || "").split("") as MoveCommand[],
   };
 }

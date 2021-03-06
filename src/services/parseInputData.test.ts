@@ -17,7 +17,7 @@ describe("parseInputData", () => {
             y: 3,
             orientation: "N",
           },
-          commands: "FLLFR",
+          commands: ["F", "L", "L", "F", "R"],
         },
         {
           position: {
@@ -25,7 +25,7 @@ describe("parseInputData", () => {
             y: 0,
             orientation: "S",
           },
-          commands: "FFRLF",
+          commands: ["F", "F", "R", "L", "F"],
         },
       ],
     });
